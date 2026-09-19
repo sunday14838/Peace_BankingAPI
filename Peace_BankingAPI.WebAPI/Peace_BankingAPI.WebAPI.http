@@ -1,0 +1,6 @@
+@Peace_BankingAPI.WebAPI_HostAddress = http://localhost:5148
+
+GET {{Peace_BankingAPI.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
