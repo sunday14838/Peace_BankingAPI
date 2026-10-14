@@ -11,6 +11,7 @@ using Peace_BankingAPI.Infrastructure.Auth;
 using Peace_BankingAPI.Infrastructure.Data;
 using Peace_BankingAPI.Infrastructure.Repositories;
 using Peace_BankingAPI.Infrastructure.Security;
+using Peace_BankingAPI.WebAPI.Middleware;
 using System.Text;
 
 namespace Peace_BankingAPI.WebAPI
@@ -119,6 +120,8 @@ namespace Peace_BankingAPI.WebAPI
 
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
